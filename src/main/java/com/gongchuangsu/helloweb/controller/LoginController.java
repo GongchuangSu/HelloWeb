@@ -15,16 +15,16 @@ public class LoginController {
 	/**
 	 * 登陆界面
 	 */
-	@RequestMapping(value = "login", method=RequestMethod.POST)
+	@RequestMapping(value = "login", method={RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView login(HttpServletRequest request, 
 			HttpServletResponse response) throws Exception{
 		// 获取表单提交的数据
-		String userName = request.getParameter("userName");
-		String userPsd = request.getParameter("userPsd");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
 		// 创建模型对象用来返回
 		ModelAndView mv = new ModelAndView();
-		if("admin".equals(userName) && "admin".equals(userPsd)){
-			mv.addObject("userName", userName);
+		if("admin".equals(username) && "admin".equals(password)){
+			mv.addObject("username", username);
 			mv.setViewName("redirect:/home");
 		}else{
 			mv.addObject("error", "登录失败，请尝试重新登陆！");
@@ -38,9 +38,9 @@ public class LoginController {
 	 */
 	@RequestMapping(value = "home", method = RequestMethod.GET)
 	public ModelAndView home(
-			@RequestParam(value = "name", required = false, defaultValue = "admin") String userName){
+			@RequestParam(value = "name", required = false, defaultValue = "admin") String username){
 		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("userName", userName);
+		mv.addObject("username", username);
 		return mv;
 	}
 }

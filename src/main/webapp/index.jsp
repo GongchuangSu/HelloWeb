@@ -10,13 +10,6 @@ pageEncoding="UTF-8"%>
 <title>登陆</title>
 </head>
 <body>
-	<center>
-		<h2>Hello Web</h2>
-		<form action="login" method="post">
-			用户名：<input type="text" name="userName"/><br/>
-			密码：<input type="password" name="userPsd"/><br/>
-			<input type="submit" value="登陆"/>
-		</form>
-	</center>
+	<% response.sendRedirect("login"); %>
 </body>
 </html>

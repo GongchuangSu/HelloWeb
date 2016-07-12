@@ -6,11 +6,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
 
+	/**
+	 * µÇÂ½½çÃæ
+	 */
 	@RequestMapping(value = "login", method=RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, 
 			HttpServletResponse response) throws Exception{
@@ -21,11 +25,22 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView();
 		if("admin".equals(userName) && "admin".equals(userPsd)){
 			mv.addObject("userName", userName);
-			mv.setViewName("/main");
+			mv.setViewName("redirect:/home");
 		}else{
 			mv.addObject("error", "µÇÂ¼Ê§°Ü£¬Çë³¢ÊÔÖØÐÂµÇÂ½£¡");
 			mv.setViewName("/login");
 		}
+		return mv;
+	}
+	
+	/**
+	 * Ê×Ò³
+	 */
+	@RequestMapping(value = "home", method = RequestMethod.GET)
+	public ModelAndView home(
+			@RequestParam(value = "name", required = false, defaultValue = "admin") String userName){
+		ModelAndView mv = new ModelAndView("home");
+		mv.addObject("userName", userName);
 		return mv;
 	}
 }

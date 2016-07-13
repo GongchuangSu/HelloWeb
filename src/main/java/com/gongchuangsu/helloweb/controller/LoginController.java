@@ -3,14 +3,20 @@ package com.gongchuangsu.helloweb.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.gongchuangsu.helloweb.service.UserService;
+
 @Controller
 public class LoginController {
+	
+	@Autowired
+	private UserService userService;
 
 	/**
 	 * 登陆界面
@@ -23,7 +29,7 @@ public class LoginController {
 		String password = request.getParameter("password");
 		// 创建模型对象用来返回
 		ModelAndView mv = new ModelAndView();
-		if("admin".equals(username) && "admin".equals(password)){
+		if(userService.getUserByLogin(username, password)){
 			mv.addObject("username", username);
 			mv.setViewName("redirect:/home");
 		}else{

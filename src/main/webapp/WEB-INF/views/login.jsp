@@ -106,5 +106,7 @@
 	    <button>提    交</button>
 	</div>
 	</form>
+	<!-- 登陆失败显示错误信息 -->
+    <center>${ error }</center>
 </body>
 </html>

@@ -5,6 +5,7 @@
     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
   <display-name>Archetype Created Web Application</display-name>
     
+    <!-- 声明servlet对象 -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>
@@ -13,6 +14,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
  
+ 	<!-- 映射Servlet -->
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>

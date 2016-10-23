@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-  <display-name>Archetype Created Web Application</display-name>
+  	<display-name>Archetype Created Web Application</display-name>
     
     <!-- 声明servlet对象 -->
 	<servlet>
@@ -14,7 +14,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
  
- 	<!-- 映射Servlet -->
+ 	<!-- 映射Servlet -->  
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
@@ -25,6 +25,7 @@
 		<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
 	</context-param>
  
+ 	<!-- 声明Servlet监听器 -->
 	<listener>
 		<listener-class>
 			org.springframework.web.context.ContextLoaderListener

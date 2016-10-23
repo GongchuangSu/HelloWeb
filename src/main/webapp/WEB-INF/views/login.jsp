@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -97,7 +97,7 @@
 	</style>
 </head>
 <body>
-	<form action="login" method="post">
+	<form action="login_check" method="post">
 	<div class="logo"></div>
 	    <div class="login-block">
 	    <h1>登陆</h1>
@@ -105,8 +105,8 @@
 	    <input type="password" value="" placeholder="密    码" name="password" id="password" />
 	    <button>提    交</button>
 	</div>
-	</form>
 	<!-- 登陆失败显示错误信息 -->
     <center>${ error }</center>
+	</form>
 </body>
 </html>

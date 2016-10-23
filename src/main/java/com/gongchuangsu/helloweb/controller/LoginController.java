@@ -19,10 +19,10 @@ public class LoginController {
 	private UserService userService;
 
 	/**
-	 * 登陆界面
+	 * 登陆检测
 	 */
-	@RequestMapping(value = "login", method={RequestMethod.POST,RequestMethod.GET})
-	public ModelAndView login(HttpServletRequest request, 
+	@RequestMapping(value = "/login_check", method={RequestMethod.POST,RequestMethod.GET})
+	public ModelAndView login_check(HttpServletRequest request, 
 			HttpServletResponse response) throws Exception{
 		// 获取表单提交的数据
 		String username = request.getParameter("username");
@@ -37,6 +37,14 @@ public class LoginController {
 			mv.setViewName("/login");
 		}
 		return mv;
+	}
+	
+	/**
+	 * 登陆界面
+	 */
+	@RequestMapping(value = "login", method = {RequestMethod.POST,RequestMethod.GET})
+	public void login(){
+
 	}
 	
 	/**

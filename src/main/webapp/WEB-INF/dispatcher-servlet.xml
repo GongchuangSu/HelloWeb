@@ -13,6 +13,7 @@
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
+	<!-- 注解 -->
 	<mvc:annotation-driven />
 	
 	<!-- 开启框架对注解控制器的自动检测 -->

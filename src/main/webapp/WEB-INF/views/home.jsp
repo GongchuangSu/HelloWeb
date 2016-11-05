@@ -53,7 +53,7 @@
 			</li>
 			<li><a href="buttons.html"><i class="icon icon-tint"></i> <span>按钮 &amp; 图标</span></a></li>
 			<li><a href="interface.html"><i class="icon icon-pencil"></i> <span>UI元素</span></a></li>
-			<li><a href="tables.html"><i class="icon icon-th"></i> <span>表格</span></a></li>
+			<li><a href="tables"><i class="icon icon-th"></i> <span>表格</span></a></li>
 			<li><a href="grid.html"><i class="icon icon-th-list"></i> <span>网格布局</span></a></li>
 			<li class="submenu">
 				<a href="#"><i class="icon icon-file"></i> <span>其他页面</span> <span class="label">4</span></a>
@@ -87,7 +87,7 @@
 			<h1>控制台</h1>
 		</div>
 		<div id="breadcrumb">
-			<a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+			<a href="home" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
 			<a href="#" class="current">控制台</a>
 		</div>
 		<div class="container-fluid">
@@ -249,7 +249,8 @@
 			</div>
 			<div class="row-fluid">
 				<div id="footer" class="span12">
-					2011-2016 &copy; GongchuangSu. </div>
+					2011-2016 &copy; GongchuangSu.
+				</div>
 			</div>
 		</div>
 	</div>

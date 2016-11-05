@@ -5,7 +5,7 @@
     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
   	<display-name>Archetype Created Web Application</display-name>
     
-    <!-- 声明servlet对象 -->
+    <!-- 注册DispatcherServlet，声明servlet对象 -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>
@@ -21,17 +21,18 @@
 	</servlet-mapping>
  
  	<!-- 映射Servlet -->  
-	<servlet-mapping>
+	<servlet-mapping> 
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
  
+ 	<!-- 设置根上下文配置文件位置 -->
  	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
 	</context-param>
  
- 	<!-- 声明Servlet监听器 -->
+ 	<!-- 注册ContextLoaderListener，声明Servlet监听器 -->
 	<listener>
 		<listener-class>
 			org.springframework.web.context.ContextLoaderListener

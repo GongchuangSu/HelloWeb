@@ -106,7 +106,13 @@
 	    <button>提    交</button>
 	</div>
 	<!-- 登陆失败显示错误信息 -->
-    <center>${ error }</center>
+    <center>
+    	<c:if test="${not empty param.error}">
+    		<font color="red">
+    		登录失败，请尝试重新登陆！
+    		</font>
+    	</c:if>
+    </center>
 	</form>
 </body>
 </html>

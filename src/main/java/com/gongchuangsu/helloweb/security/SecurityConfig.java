@@ -28,11 +28,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.passwordParameter("password") // 默认为password
 				.loginPage("/login")           // 指定登陆界面的位置，否则为默认登录页
 				.defaultSuccessUrl("/home")    // 默认为登录界面（/login）
-				//.failureUrl("/login.jsp?error=true") // 设置登陆失败界面
+				.failureUrl("/login?error=true") // 设置登陆失败界面
 				.permitAll() // 允许所有用户都可以访问登陆界面
 				.and()
 			.logout()
-				.logoutUrl("/logout") 
+				.logoutUrl("/logout")
 				.logoutSuccessUrl("/login") // 指定退出界面
 			.and()
 			.csrf().disable(); // 禁用CSRF		

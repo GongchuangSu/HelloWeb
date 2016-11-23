@@ -36,7 +36,7 @@
                    </ul>
                </li>
                <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">设置</span></a></li>
-               <li class="btn btn-inverse"><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+               <li class="btn btn-inverse"><a title="" href="./logout"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
            </ul>
        </div>
 	<div id="sidebar">
@@ -68,7 +68,7 @@
 				<a href="charts.html"><i class="icon icon-signal"></i> <span>图表统计</span></a>
 			</li>
 			<li>
-				<a href="widgets.html"><i class="icon icon-inbox"></i> <span>插件</span></a>
+				<a href="admin"><i class="icon icon-inbox"></i> <span>管理员</span></a>
 			</li>
 		</ul>
 	
@@ -249,7 +249,7 @@
 			</div>
 			<div class="row-fluid">
 				<div id="footer" class="span12">
-					2011-2016 &copy; GongchuangSu.
+					2011-2016 &copy; By GongchuangSu.
 				</div>
 			</div>
 		</div>

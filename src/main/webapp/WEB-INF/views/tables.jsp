@@ -175,7 +175,7 @@
 			</div>
 		<div class="row-fluid">
 			<div id="footer" class="span12">
-				2011-2016 &copy; GongchuangSu. </div>
+				2011-2016 &copy; By GongchuangSu. </div>
 		</div>
 		</div>
 	</div>

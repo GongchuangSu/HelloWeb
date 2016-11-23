@@ -97,7 +97,7 @@
 	</style>
 </head>
 <body>
-	<form action="login_check" method="post">
+	<form action="login" method="post">
 	<div class="logo"></div>
 	    <div class="login-block">
 	    <h1>登陆</h1>

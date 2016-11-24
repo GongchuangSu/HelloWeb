@@ -15,15 +15,4 @@ public class LoginController {
 	@RequestMapping(value = "login", method = {RequestMethod.POST,RequestMethod.GET})
 	public void login(){
 	}
-	
-	/**
-	 * Ê×Ò³
-	 */
-	@RequestMapping(value = "home", method = RequestMethod.GET)
-	public ModelAndView home(
-			@RequestParam(value = "name", required = false, defaultValue = "admin") String username){
-		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("username", username);
-		return mv;
-	}
 }

@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="header">
-		<h1><a href="./home">Home</a></h1>		
+		<h1><a href=".">Home</a></h1>		
 	</div>
 	<div id="search">
 			<input type="text" placeholder="请输入搜索内容..."/>
@@ -41,9 +41,9 @@
            </ul>
        </div>
 	<div id="sidebar">
-		<a href="#" class="visible-phone"><i class="icon icon-home"></i>首页</a>
+		<a href="." class="visible-phone"><i class="icon icon-home"></i>首页</a>
 		<ul>
-			<li ><a href="./home"><i class="icon icon-home"></i> <span>首页</span></a></li>
+			<li ><a href="."><i class="icon icon-home"></i> <span>首页</span></a></li>
 			<li class="submenu">
 				<a href="#"><i class="icon icon-th-list"></i> <span>表单组件</span> <span class="label">3</span></a>
 				<ul>
@@ -88,7 +88,7 @@
 			<h1>表格</h1>
 		</div>
 		<div id="breadcrumb">
-			<a href="home" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+			<a href="." title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
 			<a href="tables" class="current">表格</a>
 		</div>
 		<div class="container-fluid">

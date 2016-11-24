@@ -99,20 +99,22 @@
 <body>
 	<form action="login" method="post">
 	<div class="logo"></div>
-	    <div class="login-block">
+    <div class="login-block">
 	    <h1>登陆</h1>
 	    <input type="text" value="" placeholder="用户名" name="username" id="username" />
 	    <input type="password" value="" placeholder="密    码" name="password" id="password" />
 	    <button>提    交</button>
+	    <input type="checkbox" name="remember-me" id="remember_me"/>
+	    <label for="remember_me">记住登录状态</label>
 	</div>
 	<!-- 登陆失败显示错误信息 -->
-    <center>
+    <div align="center">
     	<c:if test="${not empty param.error}">
-    		<font color="red">
+    		<font color="#ff7b81">
     		登录失败，请尝试重新登陆！
     		</font>
     	</c:if>
-    </center>
+    </div>
 	</form>
 </body>
 </html>

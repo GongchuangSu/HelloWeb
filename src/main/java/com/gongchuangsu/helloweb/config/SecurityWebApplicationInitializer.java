@@ -1,4 +1,4 @@
-package com.gongchuangsu.helloweb.security;
+package com.gongchuangsu.helloweb.config;
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
 /**

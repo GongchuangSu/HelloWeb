@@ -20,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception{
 		http
 			.authorizeRequests()
+				.antMatchers("/static/**").permitAll()
 				.antMatchers("/tables").hasRole("ADMIN") // 只有拥有ROLE_ADMIN权限的用户才能访问/admin请求
 				.antMatchers("/**").authenticated()      // 用户只有通过认证才能访问请求
 				.and()	

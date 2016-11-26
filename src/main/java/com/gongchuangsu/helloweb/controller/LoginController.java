@@ -2,8 +2,12 @@ package com.gongchuangsu.helloweb.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,13 +29,18 @@ public class LoginController {
 	
 	// 显示注册界面
 	@RequestMapping(value="/register", method=RequestMethod.GET)
-	public String showRegistrationForm(){
+	public String showRegistrationForm(Model model){
+		model.addAttribute(new User());
 		return "register";
 	}
 	
 	// 处理注册页面
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String processRegistration(){
+	public String processRegistration(
+			@Valid User user, Errors errors){
+		if(errors.hasErrors())
+			return "register";
+		userService.addUser(user);
 		return "redirect:.";
 	}
 }

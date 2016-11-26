@@ -22,10 +22,12 @@ public class User implements Serializable{
 	@Column(name="id")
 	private long id;              // 用户ID
 	
+	@NotNull
 	@Size(min=3, max=20)
 	@Column(name="username")
 	private String username;      // 用户名
 	
+	@NotNull
 	@Size(min=6, max=20)
 	@Column(name="password")
 	private String password;      // 用户密码
@@ -43,7 +45,7 @@ public class User implements Serializable{
 	private String sex;            // 性别
 	
 	@Column(name="enabled")
-	private byte enabled;
+	private byte enabled = 1;
 	
 	public long getId(){
 		return id;
@@ -93,7 +95,7 @@ public class User implements Serializable{
 		return enabled;
 	}
 
-	public void setEnabled(byte enabled) {
-		this.enabled = enabled;
-	}
+//	public void setEnabled(byte enabled) {
+//		this.enabled = enabled;
+//	}
 }

@@ -1,9 +1,26 @@
 package com.gongchuangsu.helloweb.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gongchuangsu.helloweb.dao.IUserDao;
 import com.gongchuangsu.helloweb.model.User;
 
-public interface UserService {
-	void insertUser(User user);
-	boolean getUserByLogin(String userName, String password);
-	boolean getUserByUserName(String userName);
+@Service
+public class UserService implements IUserService{
+	@Autowired
+	private IUserDao userDao;
+	
+	@Override
+	public User getUserById(long id) {
+		User user = userDao.getUserById(id);
+		return user;
+	}
+
+	@Override
+	public List<User> getAllUsers() {
+		return userDao.getAllUsers();
+	}
 }

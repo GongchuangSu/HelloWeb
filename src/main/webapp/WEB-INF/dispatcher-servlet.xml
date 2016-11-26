@@ -48,21 +48,4 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	  <property name="dataSource" ref="dataSource" />
 	</bean>	
-	
-	<!-- 配置sqlSessionFactory -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-	  <property name="dataSource" ref="dataSource" />
-	  <property name="typeAliasesPackage" value="com.gongchuangsu.helloweb.model"/>
-	  <property name="mapperLocations" value="classpath*:com.gongchuangsu.helloweb.mapper/*.xml" />
-	</bean>
-
-	<!-- 配置sqlSession-->
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-	  <constructor-arg index="0" ref="sqlSessionFactory" />
-	</bean>
-	
-	<!-- 配置MapperScannerConfigurer -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	  <property name="basePackage" value="com.gongchuangsu.helloweb.mapper" />
-	</bean>	
 </beans>

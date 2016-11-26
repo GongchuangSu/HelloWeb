@@ -6,13 +6,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/login.css"  type="text/css"/>
-	<title>登陆</title>
+	<title>注册</title>
 </head>
 <body>
-	<form action="login" method="post">
+	<form method="post">
 	<div class="logo"></div>
     <div class="login-block">
-	    <h1>登陆</h1>
+	    <h1>注册</h1>
 	    <input type="text" value="" placeholder="用户名" name="username" id="username" />
 	    <input type="password" value="" placeholder="密    码" name="password" id="password" />
 	    <div class="login_remember">

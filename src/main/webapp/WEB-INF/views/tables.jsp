@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -102,72 +103,22 @@
 							<table class="table table-bordered data-table">
 								<thead>
 									<tr>
-										<th>Rendering engine</th> 
-										<th>Browser</th>
-										<th>Platform(s)</th>
-										<th>Engine version</th>
+										<th>用户名</th> 
+										<th>性别</th>
+										<th>手机号</th>
+										<th>地址</th>									
 									</tr>
 								</thead>
 								<tbody>
-								<tr class="gradeX">
-								<td>Trident</td>
-								<td>Internet
-								Explorer 4.0</td>
-								<td>Win 95+</td>
-								<td class="center">4</td>
-								</tr>
-								<tr class="gradeC">
-								<td>Trident</td>
-								<td>Internet
-								Explorer 5.0</td>
-								<td>Win 95+</td>
-								<td class="center">5</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Trident</td>
-								<td>Internet
-								Explorer 5.5</td>
-								<td>Win 95+</td>
-								<td class="center">5.5</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Trident</td>
-								<td>Internet
-								Explorer 6</td>
-								<td>Win 98+</td>
-								<td class="center">6</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Trident</td>
-								<td>Internet Explorer 7</td>
-								<td>Win XP SP2+</td>
-								<td class="center">7</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Trident</td>
-								<td>AOL browser (AOL desktop)</td>
-								<td>Win XP</td>
-								<td class="center">6</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 1.0</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.7</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 1.5</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								</tr>
-								<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 2.0</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								</tr>
-								</tbody>
+								<c:forEach items="${userList}" var="user">
+									<tr>
+										<td>${user.username}</td>
+										<td>${user.sex}</td>
+										<td>${user.phonenumber}</td>
+										<td>${user.emailaddress}</td>										
+									</tr>
+								</c:forEach>
+								</tbody>								
 							</table>  
 						</div>
 					</div>

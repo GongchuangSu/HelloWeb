@@ -97,7 +97,7 @@
 				<div class="span12">					
 					<div class="widget-box">
 						<div class="widget-title">
-							<h5>Dynamic table</h5>
+							<h5>用户信息</h5>
 						</div>
 						<div class="widget-content nopadding">
 							<table class="table table-bordered data-table">

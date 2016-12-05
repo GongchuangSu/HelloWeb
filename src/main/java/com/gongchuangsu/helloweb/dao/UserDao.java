@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gongchuangsu.helloweb.model.User;
+import com.gongchuangsu.helloweb.model.UserRole;
 
 @Transactional
 @Repository
@@ -30,6 +31,11 @@ public class UserDao implements IUserDao{
 	@Override
 	public void addUser(User user) {
 		hibernateTemplate.save(user);
+		// 插入角色信息，默认角色为ROLE_USER
+		UserRole userRole = new UserRole();
+		userRole.setUsername(user.getUsername());
+		userRole.setRole("ROLE_USER");
+		hibernateTemplate.save("UserRole", userRole);
 	}
 
 	@Override

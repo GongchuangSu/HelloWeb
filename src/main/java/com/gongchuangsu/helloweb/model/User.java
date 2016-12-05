@@ -1,8 +1,6 @@
 package com.gongchuangsu.helloweb.model;
 
 import java.io.Serializable;
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,7 +40,7 @@ public class User implements Serializable{
 	
 	@NotNull
 	@Column(name="sex")
-	private String sex;            // 性别
+	private String sex;           // 性别
 	
 	@Column(name="enabled")
 	private byte enabled = 1;

@@ -28,4 +28,9 @@ public class UserService implements IUserService{
 	public void addUser(User user) {
 		userDao.addUser(user);
 	}
+
+	@Override
+	public boolean userExists(String username) {
+		return userDao.userExists(username);
+	}
 }

@@ -8,4 +8,5 @@ public interface IUserService {
 	User getUserById(long id);
 	List<User> getAllUsers();
 	void addUser(User user);
+	boolean userExists(String username);
 }

@@ -14,6 +14,13 @@
 		<div class="register-block">
 			<h1>注册</h1>
 			<sf:errors path="username"/>
+			<div>
+				<c:if test="${not empty param.userExists}">
+		    		<font color="#ff7b81">
+		    		该用户名已被注册！
+		    		</font>
+		    	</c:if>
+			</div>
 			<sf:input type="text" placeholder="姓名" path="username"/>
 			<sf:errors path="password"/>
 			<sf:input type="text" placeholder="密码" path="password"/>

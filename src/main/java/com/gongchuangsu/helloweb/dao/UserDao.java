@@ -62,7 +62,7 @@ public class UserDao implements IUserDao{
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean userExists(String username) {
-		String hql = "from user_info where username = ?";
+		String hql = "from User u where u.username = ?";
 		List<User> users = (List<User>) hibernateTemplate.find(hql, username);
 		return users.size() > 0 ? true : false;
 	}

@@ -1,7 +1,5 @@
 package com.gongchuangsu.helloweb.controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +38,8 @@ public class LoginController {
 			@Valid User user, Errors errors){
 		if(errors.hasErrors())
 			return "register";
+		if(userService.userExists(user.getUsername()))
+			return "redirect:/register?userExists=true";
 		userService.addUser(user);
 		return "redirect:.";
 	}

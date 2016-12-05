@@ -18,6 +18,7 @@
 			<sf:errors path="password"/>
 			<sf:input type="text" placeholder="密码" path="password"/>
 			<sf:input type="email" placeholder="Email" path="emailaddress"/>
+			<sf:errors path="phonenumber"/>
 			<sf:input type="text" placeholder="手机号" path="phonenumber"/>
 			<sf:input type="text" placeholder="性别" path="sex"/>
 			<button>提    交</button>

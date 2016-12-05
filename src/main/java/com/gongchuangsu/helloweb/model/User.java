@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -21,12 +22,14 @@ public class User implements Serializable{
 	private long id;              // 用户ID
 	
 	@NotNull
-	@Size(min=3, max=20)
+	@Pattern(regexp="^[a-zA-Z][a-zA-Z0-9_]{2,19}$"
+			, message="以字母开头，长度在3~20之间，只能包含字母、数字和下划线")
 	@Column(name="username")
 	private String username;      // 用户名
 	
 	@NotNull
-	@Size(min=6, max=20)
+	@Pattern(regexp="^[a-zA-Z]\\w{5,17}$"
+			, message="以字母开头，长度在6~18之间，只能包含字母、数字和下划线")
 	@Column(name="password")
 	private String password;      // 用户密码
 	
@@ -35,6 +38,8 @@ public class User implements Serializable{
 	private String emailaddress;  // 邮件地址
 	
 	@NotNull
+	@Pattern(regexp="^((13[0-9])|(14[5,7])|(15[^4,\\D])|(17[6-8])|(18[0-9]))\\d{8}$"
+			, message="格式错误")
 	@Column(name="phonenumber")
 	private String phonenumber;   // 手机号
 	

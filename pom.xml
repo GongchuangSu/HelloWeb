@@ -116,6 +116,13 @@
 	    <artifactId>hibernate-validator</artifactId>
 	    <version>${hibernate-validator.version}</version>
 	</dependency>	
+	
+	<!-- util -->
+	<dependency>
+    <groupId>com.thoughtworks.xstream</groupId>
+    <artifactId>xstream</artifactId>
+    <version>1.4.9</version>
+</dependency>
   </dependencies>
  
   <build>

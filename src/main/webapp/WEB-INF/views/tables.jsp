@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/bootstrap.min.css" type="text/css"/>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/bootstrap-responsive.min.css" type="text/css"/>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/font-awesome.css" type="text/css"/>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/uniform.css" type="text/css"/>	
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/select2.css" type="text/css"/>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/unicorn.main.css" type="text/css"/>
@@ -124,11 +125,12 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		<div class="row-fluid">
 			<div id="footer" class="span12">
-				2011-2016 &copy; By GongchuangSu. </div>
-		</div>
-		</div>
+				2011-2016 &copy; By GongchuangSu. 
+			</div>
+		</div>		
 	</div>
     <script src="<%=request.getContextPath()%>/static/js/jquery.min.js"></script>
     <script src="<%=request.getContextPath()%>/static/js/jquery.ui.custom.js"></script>
